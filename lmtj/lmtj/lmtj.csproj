@@ -72,7 +72,8 @@
     <Content Include="assets\jamie&amp;me.jpg" />
     <Content Include="assets\lisa&amp;stephen.JPG" />
     <Content Include="assets\lisaregina&amp;joe.jpg" />
-    <Content Include="assets\Map %281%29.jpg" />
+    <Content Include="assets\Map.jpg" />
+    <Content Include="favicon.ico" />
     <Content Include="map.css" />
     <Content Include="assets\regina&amp;tj.jpg" />
     <Content Include="assets\scalagirls&amp;me-2.jpg" />
@@ -89,17 +90,17 @@
     <Content Include="assets\tjlisa&amp;stephen.JPG" />
     <Content Include="assets\tjlisakev&amp;sky.jpg" />
     <Content Include="assets\will&amp;me.jpg" />
-    <Content Include="lisa.html" />
-    <Content Include="lisa2.html" />
+    <Content Include="index.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="README.md" />
+    <None Include="README.md" />
     <Content Include="assets\invites\frenchy.ttf" />
     <Content Include="assets\invites\JennaSue.ttf" />
+    <None Include="Properties\PublishProfiles\live.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

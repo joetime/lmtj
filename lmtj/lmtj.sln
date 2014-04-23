@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lmtj", "lmtj\lmtj.csproj", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "notes", "notes", "{22E6ED0A-0B5C-4240-83ED-CF9332AD7D79}"
 	ProjectSection(SolutionItems) = preProject
+		lmtj\lisa2.html = lmtj\lisa2.html
+		lmtj\assets\Map (1).jpg = lmtj\assets\Map (1).jpg
 		notes.txt = notes.txt
 	EndProjectSection
 EndProject
