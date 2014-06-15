@@ -143,7 +143,7 @@ input {
     font-weight: bold;
 }
 
-.input-checkbox {
+span.input-checkbox input {
     margin: 0px;
     padding: 0px;
     background-color: white;

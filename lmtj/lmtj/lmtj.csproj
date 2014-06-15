@@ -38,7 +38,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -58,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\amelia&amp;me.jpg" />
+    <Content Include="assets\toby.jpg" />
     <Content Include="assets\invites\3. RUSTIC.png" />
     <Content Include="assets\invites\4. RUSTIC.png" />
     <Content Include="assets\invites\4.png" />
@@ -65,19 +74,26 @@
     <Content Include="assets\invites\9. RUSTIC.png" />
     <Content Include="assets\invites\arrow number 7.png" />
     <Content Include="assets\invites\greenbird.jpg" />
+    <Content Include="assets\matt.jpg" />
     <Content Include="assets\invites\redbird.jpg" />
     <Content Include="assets\filmstrip.jpg" />
     <Content Include="assets\invites\INVITE BACK!.jpg" />
     <Content Include="assets\invites\INVITE FRONT!.jpg" />
     <Content Include="assets\jamie&amp;me.jpg" />
+    <Content Include="assets\katie.jpg" />
+    <Content Include="assets\kevin.jpg" />
     <Content Include="assets\lisa&amp;stephen.JPG" />
     <Content Include="assets\lisaregina&amp;joe.jpg" />
     <Content Include="assets\Map.jpg" />
+    <Content Include="assets\mark.jpg" />
+    <Content Include="assets\ryder.jpg" />
+    <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="map.css" />
     <Content Include="assets\regina&amp;tj.jpg" />
     <Content Include="assets\scalagirls&amp;me-2.jpg" />
     <Content Include="font-test.html" />
+    <Content Include="RsvpForm.ascx" />
     <Content Include="top.css" />
     <Content Include="style.css" />
     <Content Include="assets\tj&amp;andrew.png" />
@@ -94,9 +110,61 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Guest.cs">
+      <DependentUpon>LMTJModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\LMTJModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LMTJModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\LMTJModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LMTJModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\LMTJModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LMTJModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Song.cs">
+      <DependentUpon>LMTJModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RsvpForm.ascx.cs">
+      <DependentUpon>RsvpForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="RsvpForm.ascx.designer.cs">
+      <DependentUpon>RsvpForm.ascx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EntityDeploy Include="Data\LMTJModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LMTJModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Data\LMTJModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LMTJModel.edmx</DependentUpon>
+      <LastGenOutput>LMTJModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\LMTJModel.edmx.diagram">
+      <DependentUpon>LMTJModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Data\LMTJModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LMTJModel.edmx</DependentUpon>
+      <LastGenOutput>LMTJModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="packages.config" />
     <None Include="README.md" />
     <Content Include="assets\invites\frenchy.ttf" />
     <Content Include="assets\invites\JennaSue.ttf" />
@@ -107,6 +175,12 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
